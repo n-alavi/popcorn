@@ -16,13 +16,19 @@ const TextStyle = {
 };
 export default function StarRating({ maxRating = 5 }) {
   const [rating, setRating] = useState(1);
+
+  function handleRating(rating) {
+    setRating(rating);
+  }
+
   return (
     <div style={containerStyle}>
       <div style={starContainerStyle}>
         {Array.from({ length: maxRating }, (_, i) => (
-          <Star key={i} onRate={() => setRating(i + 1)} />
+          <Star key={i} onRate={() => handleRating(i + 1)} />
         ))}
       </div>
+
       <p style={TextStyle}>{rating || ""}</p>
     </div>
   );
