@@ -52,8 +52,8 @@ export default function StarRating({
 function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
   const starStayle = {
     display: "block",
-    width: `${size} px`,
-    height: `${size} px`,
+    width: "48px",
+    height: "48px",
     cursor: "pointer",
   };
   return (
