@@ -36,7 +36,7 @@ export default function StarRating({ maxRating = 5 }) {
         ))}
       </div>
 
-      <p style={TextStyle}>{tempRating || ""}</p>
+      <p style={TextStyle}>{tempRating || rating || ""}</p>
     </div>
   );
 }
